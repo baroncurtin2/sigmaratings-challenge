@@ -1,0 +1,94 @@
+# For the following questions, use any resources you'd like including stackoverflow 3rd party libraries, etc.
+
+# In SQL
+
+# Employee Table:
+
+# Emp_ID  Emp_Name            Emp_No
+# 101     Ashish Kaktan       9450425345
+# 102     Raj Choudhary       8462309621
+# 103     Vivek Oberoi        7512309034
+# 104     Shantanu Khandelwal 9020330023
+# 105     Khanak Desai        8451004522
+
+# Employment Table:
+
+# Emp_ID  Emp_Profile             Emp_Country     Emp_Join_Date
+# 101     Content Writer          Germany         2021-04-20
+# 104     Data Analyst            India           2022-12-11
+# 105     Software Engineer       India           2022-01-03
+# 108     Development Executive   Europe          2023-02-15
+# 109     Marketing Manager       Mexico          2020-05-23
+
+
+# Get all Emp_ID's that are in the Employee Table that are not in the Employment Table.
+
+# Get all Emp_ID's that are in both the Employee Table and the Employment Table.
+
+# Get all unique values of Emp_Profile when Emp_Country is set to India.
+
+
+# In Python
+
+# Given two strings, write a function to determine if they are anagrams of one another
+# e.g. ("Debit Card", "Bad Credit") -> False, ("tacoCat", "Cattaco") -> True, ("bad", "good") -> False, ("bad", "dba") -> True.
+
+def anagram(first, second):
+    pass
+
+
+
+# Given a list of of strings, write a function that returns all elements of the list that contain non-ascii characters. How would the function change if the list is > 1,000,000,000 elements long?
+
+
+def get_non_ascii(string_list):
+    pass
+
+
+
+# Given two strings, determine the minimum number of operations (additions, deletions, or changes) needed to turn one string into the other
+# e.g.
+# count_transformations("sigma", "ratings")
+# >>> 6
+
+# count_transformations("football", "baseball")
+# >>> 4
+
+def count_transformations(first, second):
+    pass
+
+
+
+# Given the following schema for a dataframe `df`:
+
+# [REDACTED]
+#  |-- title: string (nullable = true)
+#  |-- metadata: struct (nullable = true)
+#  |    |-- publisher: string (nullable = true)
+#  |    |-- publish_date: timestamp (nullable = true)
+#  |    |-- pull_date: timestamp (nullable = true)
+#  |    |-- source_URL: string (nullable = true)
+#  |-- region: struct (nullable = true)
+#  |    |-- type: string (nullable = true)
+#  |    |-- code: string (nullable = true)
+#  |-- ner_results: array (nullable = true)
+#  |    |-- element: struct (containsNull = true)
+#  |    |    |-- text: string (nullable = true)
+#  |    |    |-- start: integer (nullable = true)
+#  |    |    |-- end: integer (nullable = true)
+#  |    |    |-- labels: array (nullable = true)
+#  |    |    |    |-- element: string (containsNull = true)
+#  |    |    |-- score: double (nullable = true)
+#  |    |    |-- count: integer (nullable = true)
+#  |    |    |-- extraction_type: string (nullable = true)
+#  |    |    |-- sentence_index: integer (nullable = true)
+
+# In PySpark,
+
+# Write a query to display all rows where the `publish_date` is greater than 2022-01-1.
+
+# Add an new column which, for each row, is an array of all of the `text` elements within `ner_results`.
+
+# Write a query to display all of the unique values for `code` in the `region` column.
+
+# Add a new column which, for each row, is a copy of the `title` column up until the first whitespace (e.g. "This is a title in the dataframe" -> "This")
